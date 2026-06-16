@@ -3,15 +3,15 @@
 A selection of my ML / AI work from my BSc (Mechanical Engineering) and MSc
 (Robotics, Systems & Control) at ETH Zürich: course projects, my bachelor's thesis,
 and lab & team robotics. The code stays in a **private repository**, as it's unpublished work or
-graded coursework I'm not allowed to share publicly. I'm happy to guide you through it
+graded coursework. I'm happy to guide you through it
 or grant limited access on request.
 
-> 🔒 **Code:** [`amietlukas/eth-ml-projects`](https://github.com/amietlukas/eth-ml-projects) *(private — access on request)*
+> 🔒 **Code:** [`amietlukas/eth-ml-projects`](https://github.com/amietlukas/eth-ml-projects) *(private — access on request)* \
 > 📫 [lukas.amiet@bluewin.ch](mailto:lukas.amiet@bluewin.ch) · [linkedin.com/in/lukas-amiet](https://linkedin.com/in/lukas-amiet)
 
 ---
 
-## Embedded ML on Microcontrollers — *ETH PBL*
+## Embedded ML on Microcontrollers — *ETH PBL · Grade xy / 6.0*
 
 [**`embedded-vision-rc-car`**](https://github.com/amietlukas/embedded-vision-rc-car) *(public repo)*.
 A full edge-ML pipeline (dataset → trained model → quantized & pruned network) for an RC car
@@ -29,7 +29,7 @@ Both models are trained on a PC but designed **hardware-aware** from the start
   <a href="https://youtu.be/WXF68EdYNcE"><img src="https://github.com/amietlukas/embedded-vision-rc-car/raw/main/presentation/media/Paul_Assembled.jpeg" width="55%" alt="The assembled gesture-controlled, ball-chasing RC car — click to watch the demo"></a>
 </p>
 
-## Bachelor's Thesis — *ETH PBL · grade 6.0 / 6.0*
+## Bachelor's Thesis — *ETH PBL · Grade 6.0 / 6.0*
 
 **[Embedded Deep Learning for Real-Time Aerodynamic Flow Estimation on Wind-Turbine
 Blades Using MEMS Pressure Sensors](https://github.com/amietlukas/eth-ml-projects/tree/main/bachelor-thesis)** — Center for Project-Based
