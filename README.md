@@ -6,7 +6,7 @@ projects that the courses don't allow publishing publicly. I'm happy to share
 access with anyone who'd like a closer look.
 
 > 🔒 **Code:** [`amietlukas/eth-ml-projects`](https://github.com/amietlukas/eth-ml-projects) *(private — access on request)*
-> 📫 &lt;email&gt; · &lt;LinkedIn&gt; &nbsp;—&nbsp; *(to add)*
+> 📫 [lukas.amiet@bluewin.ch](mailto:lukas.amiet@bluewin.ch) · [linkedin.com/in/lukas-amiet](https://linkedin.com/in/lukas-amiet)
 
 ---
 
