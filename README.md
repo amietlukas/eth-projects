@@ -1,9 +1,9 @@
 # Lukas Amiet — ETH Zürich · Machine Learning & AI
 
-An overview of my machine-learning and AI coursework and projects at ETH Zürich.
-The code lives in a **private repository** — most of these are graded course
-projects that the courses don't allow publishing publicly. I'm happy to share
-access with anyone who'd like a closer look.
+Selected ML / AI projects from my BSc and MSc at ETH Zürich, including my bachelor's
+thesis. The code is kept in a **private repository** — ETH course policy means graded
+course solutions can't be published publicly — but I'm happy to guide you through it
+or grant limited access to anyone who'd like a closer look.
 
 > 🔒 **Code:** [`amietlukas/eth-ml-projects`](https://github.com/amietlukas/eth-ml-projects) *(private — access on request)*
 > 📫 [lukas.amiet@bluewin.ch](mailto:lukas.amiet@bluewin.ch) · [linkedin.com/in/lukas-amiet](https://linkedin.com/in/lukas-amiet)
@@ -12,22 +12,32 @@ access with anyone who'd like a closer look.
 
 ## Embedded ML on Microcontrollers — *ETH PBL*
 
-**[`embedded-vision-rc-car`](https://github.com/amietlukas/embedded-vision-rc-car)** *(public repo)* —
-machine learning running **entirely on microcontrollers** for a gesture-controlled,
-ball-chasing RC car. A hand-gesture classifier (STM32U5) turns camera input into
-drive commands over Bluetooth; a YOLO-style ball detector runs on the STM32N6
-on-chip NPU to find and chase a ball. Trained on a PC, then quantized and deployed
-on-device, with quantization-aware training, pruning, and accuracy–latency–size
-trade-off analysis.
+[**`embedded-vision-rc-car`**](https://github.com/amietlukas/embedded-vision-rc-car) *(public repo)* —
+a full edge-ML pipeline (dataset → trained model → quantized network) for an RC car
+driven by **two STM32 boards**, with every model running **on-microcontroller** — no
+PC in the loop:
 
-## Computer Vision & AI for Autonomous Cars — *ETH TRACE · 09–12.2025*
+- **Hand-gesture classifier** *(on an STM32U5)* — reads hand gestures from the camera
+  and sends drive commands to the car over Bluetooth.
+- **Ball detector** *(on an STM32N6 NPU)* — a YOLO-style network finds a ball and
+  pans/drives the car to chase it autonomously.
+
+Both models are trained on a PC but designed **hardware-aware** from the start —
+INT8 quantization, PyTorch → ONNX → on-device — to fit the Cortex-M / NPU targets.
+
+<p align="center">
+  <a href="https://youtu.be/WXF68EdYNcE"><img src="https://github.com/amietlukas/embedded-vision-rc-car/raw/main/presentation/media/Paul_Assembled.jpeg" width="55%" alt="The assembled gesture-controlled, ball-chasing RC car — click to watch the demo"></a>
+</p>
+
+## Computer Vision & AI for Autonomous Cars — *ETH TRACE*
 
 Autonomous-driving perception: 3D LiDAR object detection, point-cloud semantic
 segmentation, and monocular depth estimation.
 
-- **[`CVAIAC/object-detection-lidar/`](https://github.com/amietlukas/eth-ml-projects/tree/main/CVAIAC/object-detection-lidar)** — 3D object
-  detection from LiDAR: point-cloud → camera projection with semantic labels,
-  3D bounding-box visualization, and a trained detection model.
+- **[`CVAIAC/object-detection-lidar/`](https://github.com/amietlukas/eth-ml-projects/tree/main/CVAIAC/object-detection-lidar)** — 3D vehicle
+  detection from LiDAR point clouds: point-cloud → camera projection with semantic
+  labels, 3D bounding-box detection, and a study of stage-2 refinement (Soft-NMS and
+  geometric attention improved mAP).
 - **[`CVAIAC/image-depth-segmentation/`](https://github.com/amietlukas/eth-ml-projects/tree/main/CVAIAC/image-depth-segmentation)** —
   point-cloud semantic segmentation + monocular depth estimation.
 
@@ -45,7 +55,7 @@ segmentation, and monocular depth estimation.
 - **[`PAI/task0`](https://github.com/amietlukas/eth-ml-projects/tree/main/PAI/task0)** — Bayesian inference over a hypothesis space (Normal / Laplace / Student-t)
 - **[`PAI/task1`](https://github.com/amietlukas/eth-ml-projects/tree/main/PAI/task1)** — Gaussian-Process regression with an asymmetric cost function
 - **[`PAI/task2`](https://github.com/amietlukas/eth-ml-projects/tree/main/PAI/task2)** — Bayesian deep learning: uncertainty calibration for image classification
-- **[`PAI/task3`](https://github.com/amietlukas/eth-ml-projects/tree/main/PAI/task3)** — Constrained ("safe") Bayesian Optimization with Gaussian Processes
+- **[`PAI/task3`](https://github.com/amietlukas/eth-ml-projects/tree/main/PAI/task3)** — Constrained Bayesian Optimization with Gaussian Processes
 
 ## Computer Vision
 
@@ -78,19 +88,15 @@ segmentation, and monocular depth estimation.
 Blades Using MEMS Pressure Sensors](https://github.com/amietlukas/eth-ml-projects/tree/main/bachelor-thesis)** — Center for Project-Based
 Learning (PBL), ETH Zürich (MISTERY project). Lightweight CNNs/MLPs infer angle of
 attack, wind speed, flow separation and stagnation point from 10 MEMS pressure
-sensors, deployed on an STM32H5 microcontroller (MAE < 1°, 12 ms on-device
-inference).
+sensors, deployed on an STM32H5 microcontroller (MAE < 1°, 12 ms on-device inference).
 
-## Other relevant coursework
+- **ML** — lightweight CNNs / MLPs
+- **Embedded** — ONNX → STM32 X-CUBE-AI
+- **Hardware** — 10 MEMS sensors, STM32H5
 
-Foundational courses behind the projects above:
+→ [full write-up & results](https://github.com/amietlukas/eth-ml-projects/tree/main/bachelor-thesis)
 
-- **Estimation & control** — Recursive Estimation *(ongoing)* · Model Predictive Control *(ongoing)* · Control Systems I & II · Autonomous Mobile Robots · Robot Dynamics
-- **Probability, signals & systems** — Probability & Statistics · Signals & Systems · Embedded Systems
-
-## Beyond coursework
-
-Research and project work in the GitHub organizations I'm part of:
+## Robotics — research & team projects
 
 ### Robotic Systems Lab (RSL) — ANYmal-D solving a giant Rubik's cube
 *Perception & Learning for Robotics (PLR) — completed · semester thesis — ongoing*
@@ -105,3 +111,12 @@ Building the software stack for fully autonomous humanoid soccer robots with [**
 - Implemented a **Kalman-filter ball-tracking** module (ROS 2).
 - Improved **2D → 3D ball localization** from YOLOv8 detections.
 - Work on the **Booster K1 and T1** humanoid platforms.
+
+---
+
+## Other relevant coursework
+
+Foundational courses behind the projects above:
+
+- **Estimation & control** — Recursive Estimation · Model Predictive Control · Control Systems I & II · Autonomous Mobile Robots · Robot Dynamics
+- **Probability, signals & systems** — Probability & Statistics · Signals & Systems · Embedded Systems
