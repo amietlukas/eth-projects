@@ -1,9 +1,10 @@
 # Lukas Amiet — ETH Zürich · Machine Learning & AI
 
-Selected ML / AI projects from my BSc and MSc at ETH Zürich, including my bachelor's
-thesis. The code is kept in a **private repository** — ETH course policy means graded
-course solutions can't be published publicly — but I'm happy to guide you through it
-or grant limited access to anyone who'd like a closer look.
+A selection of my ML / AI work from my BSc (Mechanical Engineering) and MSc
+(Robotics, Systems & Control) at ETH Zürich — course projects, my bachelor's thesis,
+and lab & team robotics. The code is kept in a **private repository** (ETH doesn't
+permit publishing graded course solutions), but I'm happy to guide you through it or
+grant limited access on request.
 
 > 🔒 **Code:** [`amietlukas/eth-ml-projects`](https://github.com/amietlukas/eth-ml-projects) *(private — access on request)*
 > 📫 [lukas.amiet@bluewin.ch](mailto:lukas.amiet@bluewin.ch) · [linkedin.com/in/lukas-amiet](https://linkedin.com/in/lukas-amiet)
@@ -13,9 +14,9 @@ or grant limited access to anyone who'd like a closer look.
 ## Embedded ML on Microcontrollers — *ETH PBL*
 
 [**`embedded-vision-rc-car`**](https://github.com/amietlukas/embedded-vision-rc-car) *(public repo)* —
-a full edge-ML pipeline (dataset → trained model → quantized network) for an RC car
-driven by **two STM32 boards**, with every model running **on-microcontroller** — no
-PC in the loop:
+a full edge-ML pipeline (dataset → trained model → quantized & pruned network) for an
+RC car driven by **two STM32 boards**, with every model running **on-microcontroller** —
+no PC in the loop:
 
 - **Hand-gesture classifier** *(on an STM32U5)* — reads hand gestures from the camera
   and sends drive commands to the car over Bluetooth.
@@ -23,11 +24,25 @@ PC in the loop:
   pans/drives the car to chase it autonomously.
 
 Both models are trained on a PC but designed **hardware-aware** from the start —
-INT8 quantization, PyTorch → ONNX → on-device — to fit the Cortex-M / NPU targets.
+INT8 quantization and pruning, PyTorch → ONNX → on-device — to fit the Cortex-M / NPU targets.
 
 <p align="center">
   <a href="https://youtu.be/WXF68EdYNcE"><img src="https://github.com/amietlukas/embedded-vision-rc-car/raw/main/presentation/media/Paul_Assembled.jpeg" width="55%" alt="The assembled gesture-controlled, ball-chasing RC car — click to watch the demo"></a>
 </p>
+
+## Bachelor's Thesis — *ETH PBL · grade 6.0 / 6.0*
+
+**[Embedded Deep Learning for Real-Time Aerodynamic Flow Estimation on Wind-Turbine
+Blades Using MEMS Pressure Sensors](https://github.com/amietlukas/eth-ml-projects/tree/main/bachelor-thesis)** — Center for Project-Based
+Learning (PBL), ETH Zürich (MISTERY project). Lightweight CNNs/MLPs infer angle of
+attack, wind speed, flow separation and stagnation point from 10 MEMS pressure
+sensors, deployed on an STM32H5 microcontroller (MAE < 1°, 12 ms on-device inference).
+
+- **ML** — lightweight CNNs / MLPs
+- **Embedded** — ONNX → STM32 X-CUBE-AI
+- **Hardware** — 10 MEMS sensors, STM32H5
+
+→ [full write-up & results](https://github.com/amietlukas/eth-ml-projects/tree/main/bachelor-thesis)
 
 ## Computer Vision & AI for Autonomous Cars — *ETH TRACE*
 
@@ -36,8 +51,8 @@ segmentation, and monocular depth estimation.
 
 - **[`CVAIAC/object-detection-lidar/`](https://github.com/amietlukas/eth-ml-projects/tree/main/CVAIAC/object-detection-lidar)** — 3D vehicle
   detection from LiDAR point clouds: point-cloud → camera projection with semantic
-  labels, 3D bounding-box detection, and a study of stage-2 refinement (Soft-NMS and
-  geometric attention improved mAP).
+  labels, 3D bounding-box detection, and a stage-2 refinement study (Soft-NMS and
+  geometric attention improved mAP) on a two-stage, PointRCNN-style detector.
 - **[`CVAIAC/image-depth-segmentation/`](https://github.com/amietlukas/eth-ml-projects/tree/main/CVAIAC/image-depth-segmentation)** —
   point-cloud semantic segmentation + monocular depth estimation.
 
@@ -76,33 +91,20 @@ segmentation, and monocular depth estimation.
 ## Stochastics & Machine Learning
 
 - **[`eth-mugs-finder/`](https://github.com/amietlukas/eth-ml-projects/tree/main/eth-mugs-finder)** — binary semantic segmentation of mugs
-  ("ETH Mugs" dataset), PyTorch encoder–decoder.
+  ("ETH Mugs" dataset), a trained U-Net (PyTorch).
 - **[`distance-guesser/`](https://github.com/amietlukas/eth-ml-projects/tree/main/distance-guesser)** — distance regression from downsampled
   RGB image features (scikit-learn SVM + grid search).
 
 ---
 
-## Bachelor's Thesis
-
-**[Embedded Deep Learning for Real-Time Aerodynamic Flow Estimation on Wind-Turbine
-Blades Using MEMS Pressure Sensors](https://github.com/amietlukas/eth-ml-projects/tree/main/bachelor-thesis)** — Center for Project-Based
-Learning (PBL), ETH Zürich (MISTERY project). Lightweight CNNs/MLPs infer angle of
-attack, wind speed, flow separation and stagnation point from 10 MEMS pressure
-sensors, deployed on an STM32H5 microcontroller (MAE < 1°, 12 ms on-device inference).
-
-- **ML** — lightweight CNNs / MLPs
-- **Embedded** — ONNX → STM32 X-CUBE-AI
-- **Hardware** — 10 MEMS sensors, STM32H5
-
-→ [full write-up & results](https://github.com/amietlukas/eth-ml-projects/tree/main/bachelor-thesis)
-
 ## Robotics — research & team projects
 
-### Robotic Systems Lab (RSL) — ANYmal-D solving a giant Rubik's cube
-*Perception & Learning for Robotics (PLR) — completed · semester thesis — ongoing*
+### Robotic Systems Lab (RSL) — ANYmal-D solving a giant Rubik's cube via pedipulation
+*Perception & Learning for Robotics (PLR) — completed*<br>
+*Semester thesis — ongoing*
 
-Teaching a quadruped (ANYmal-D) to solve a giant Rubik's cube via pedipulation:
-- Reinforcement learning in **Isaac Lab / Isaac Sim** (RSL-RL) — articulated cube asset, reward shaping, curriculum, RND exploration, PPO teachers + student distillation.
+Teaching a quadruped (ANYmal-D) to manipulate and solve a giant Rubik's cube:
+- Reinforcement learning in **Isaac Lab / Isaac Sim** (RSL-RL) — articulated cube asset, reward shaping, curriculum, RND exploration, PPO teachers + perception-based student distillation.
 - **Sim-to-real** transfer and deployment on ANYmal-D hardware, with real-world failure diagnosis and iterative policy refinement.
 - Onboard cube perception: SAM-based segmentation, depth, colour classification, 6D pose estimation.
 
