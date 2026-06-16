@@ -1,10 +1,10 @@
 # Lukas Amiet — ETH Zürich · Machine Learning & AI
 
 A selection of my ML / AI work from my BSc (Mechanical Engineering) and MSc
-(Robotics, Systems & Control) at ETH Zürich — course projects, my bachelor's thesis,
-and lab & team robotics. The code is kept in a **private repository** (ETH doesn't
-permit publishing graded course solutions), but I'm happy to guide you through it or
-grant limited access on request.
+(Robotics, Systems & Control) at ETH Zürich: course projects, my bachelor's thesis,
+and lab & team robotics. The code stays in a **private repository**, as it's unpublished work or
+graded coursework I'm not allowed to share publicly. I'm happy to guide you through it
+or grant limited access on request.
 
 > 🔒 **Code:** [`amietlukas/eth-ml-projects`](https://github.com/amietlukas/eth-ml-projects) *(private — access on request)*
 > 📫 [lukas.amiet@bluewin.ch](mailto:lukas.amiet@bluewin.ch) · [linkedin.com/in/lukas-amiet](https://linkedin.com/in/lukas-amiet)
@@ -13,18 +13,17 @@ grant limited access on request.
 
 ## Embedded ML on Microcontrollers — *ETH PBL*
 
-[**`embedded-vision-rc-car`**](https://github.com/amietlukas/embedded-vision-rc-car) *(public repo)* —
-a full edge-ML pipeline (dataset → trained model → quantized & pruned network) for an
-RC car driven by **two STM32 boards**, with every model running **on-microcontroller** —
-no PC in the loop:
+[**`embedded-vision-rc-car`**](https://github.com/amietlukas/embedded-vision-rc-car) *(public repo)*.
+A full edge-ML pipeline (dataset → trained model → quantized & pruned network) for an RC car
+driven by **two STM32 boards**, with every model running **on-microcontroller** (no PC in the loop):
 
 - **Hand-gesture classifier** *(on an STM32U5)* — reads hand gestures from the camera
   and sends drive commands to the car over Bluetooth.
-- **Ball detector** *(on an STM32N6 NPU)* — a YOLO-style network finds a ball and
+- **Ball detector** *(on an STM32N6 NPU)* — a custom YOLO-style network finds a ball and
   pans/drives the car to chase it autonomously.
 
-Both models are trained on a PC but designed **hardware-aware** from the start —
-INT8 quantization and pruning, PyTorch → ONNX → on-device — to fit the Cortex-M / NPU targets.
+Both models are trained on a PC but designed **hardware-aware** from the start
+(INT8 quantization and pruning, PyTorch → ONNX → on-device) to fit the Cortex-M / NPU targets.
 
 <p align="center">
   <a href="https://youtu.be/WXF68EdYNcE"><img src="https://github.com/amietlukas/embedded-vision-rc-car/raw/main/presentation/media/Paul_Assembled.jpeg" width="55%" alt="The assembled gesture-controlled, ball-chasing RC car — click to watch the demo"></a>
@@ -104,7 +103,7 @@ segmentation, and monocular depth estimation.
 *Semester thesis — ongoing*
 
 Teaching a quadruped (ANYmal-D) to manipulate and solve a giant Rubik's cube:
-- Reinforcement learning in **Isaac Lab / Isaac Sim** (RSL-RL) — articulated cube asset, reward shaping, curriculum, RND exploration, PPO teachers + perception-based student distillation.
+- Reinforcement learning in **Isaac Lab / Isaac Sim** (RSL-RL): articulated cube asset, reward shaping, curriculum, RND exploration, PPO teachers + perception-based student distillation.
 - **Sim-to-real** transfer and deployment on ANYmal-D hardware, with real-world failure diagnosis and iterative policy refinement.
 - Onboard cube perception: SAM-based segmentation, depth, colour classification, 6D pose estimation.
 
