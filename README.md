@@ -10,6 +10,16 @@ access with anyone who'd like a closer look.
 
 ---
 
+## Embedded ML on Microcontrollers — *ETH PBL*
+
+**[`embedded-vision-rc-car`](https://github.com/amietlukas/embedded-vision-rc-car)** *(public repo)* —
+machine learning running **entirely on microcontrollers** for a gesture-controlled,
+ball-chasing RC car. A hand-gesture classifier (STM32U5) turns camera input into
+drive commands over Bluetooth; a YOLO-style ball detector runs on the STM32N6
+on-chip NPU to find and chase a ball. Trained on a PC, then quantized and deployed
+on-device, with quantization-aware training, pruning, and accuracy–latency–size
+trade-off analysis.
+
 ## Computer Vision & AI for Autonomous Cars — *ETH TRACE · 09–12.2025*
 
 Autonomous-driving perception: 3D LiDAR object detection, point-cloud semantic
@@ -21,7 +31,10 @@ segmentation, and monocular depth estimation.
 - **[`CVAIAC/image-depth-segmentation/`](https://github.com/amietlukas/eth-ml-projects/tree/main/CVAIAC/image-depth-segmentation)** —
   point-cloud semantic segmentation + monocular depth estimation.
 
-<p>
+<p align="center">
+  <img src="assets/lidar_3d_detection.png" width="55%" alt="3D vehicle detections in the LiDAR point cloud">
+</p>
+<p align="center">
   <img src="assets/task1_lidar_projection.png" width="46%" alt="LiDAR points projected onto the camera image, coloured by semantic label">
   &nbsp;
   <img src="assets/task2_3d_boxes.png" width="46%" alt="3D bounding boxes drawn on the camera image">
@@ -70,7 +83,10 @@ inference).
 
 ## Other relevant coursework
 
-*Non-ML courses worth noting — to be listed.*
+Foundational courses behind the projects above:
+
+- **Estimation & control** — Recursive Estimation *(ongoing)* · Model Predictive Control *(ongoing)* · Control Systems I & II · Autonomous Mobile Robots · Robot Dynamics
+- **Probability, signals & systems** — Probability & Statistics · Signals & Systems · Embedded Systems
 
 ## Beyond coursework
 
