@@ -100,10 +100,8 @@ Teaching a quadruped (ANYmal-D) to solve a giant Rubik's cube via pedipulation:
 - **Sim-to-real** transfer and deployment on ANYmal-D hardware, with real-world failure diagnosis and iterative policy refinement.
 - Onboard cube perception: SAM-based segmentation, depth, colour classification, 6D pose estimation.
 
-*(poster and demo video available on request)*
-
 ### NomadZ — autonomous humanoid soccer (RoboCup)
-Building the software stack for fully autonomous humanoid soccer robots with **ETH NomadZ**:
+Building the software stack for fully autonomous humanoid soccer robots with [**ETH NomadZ**](https://github.com/nomadz-ethz):
 - Implemented a **Kalman-filter ball-tracking** module (ROS 2).
 - Improved **2D → 3D ball localization** from YOLOv8 detections.
 - Work on the **Booster K1 and T1** humanoid platforms.
