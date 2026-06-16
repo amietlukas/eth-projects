@@ -2,7 +2,7 @@
 
 A selection of my ML / AI work from my BSc (Mechanical Engineering) and MSc
 (Robotics, Systems & Control) at ETH Zürich: course projects, my bachelor's thesis,
-and lab & team robotics. The code stays in a **private repository**, as it's unpublished work or
+and lab & team robotics. Most code stays in a **private repository**, as it's unpublished work or
 graded coursework. I'm happy to guide you through it
 or grant limited access on request.
 
