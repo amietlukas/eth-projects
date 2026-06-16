@@ -90,7 +90,20 @@ Foundational courses behind the projects above:
 
 ## Beyond coursework
 
-Research and project work that lives in the GitHub organizations I'm part of:
+Research and project work in the GitHub organizations I'm part of:
 
-- **Robotic Systems Lab (RSL)** — reinforcement-learning work on the ANYmal quadruped.
-- **NomadZ** — full-stack humanoid robotics code.
+### Robotic Systems Lab (RSL) — ANYmal-D solving a giant Rubik's cube
+*Perception & Learning for Robotics (PLR) — completed · semester thesis — ongoing*
+
+Teaching a quadruped (ANYmal-D) to solve a giant Rubik's cube via pedipulation:
+- Reinforcement learning in **Isaac Lab / Isaac Sim** (RSL-RL) — articulated cube asset, reward shaping, curriculum, RND exploration, PPO teachers + student distillation.
+- **Sim-to-real** transfer and deployment on ANYmal-D hardware, with real-world failure diagnosis and iterative policy refinement.
+- Onboard cube perception: SAM-based segmentation, depth, colour classification, 6D pose estimation.
+
+*(poster and demo video available on request)*
+
+### NomadZ — autonomous humanoid soccer (RoboCup)
+Building the software stack for fully autonomous humanoid soccer robots with **ETH NomadZ**:
+- Implemented a **Kalman-filter ball-tracking** module (ROS 2).
+- Improved **2D → 3D ball localization** from YOLOv8 detections.
+- Work on the **Booster K1 and T1** humanoid platforms.
