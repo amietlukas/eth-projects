@@ -11,7 +11,7 @@ or grant limited access on request.
 
 ---
 
-## Embedded ML on Microcontrollers — *ETH PBL · Grade xy / 6.0*
+## Embedded ML on Microcontrollers — *ETH PBL*
 
 [**`embedded-vision-rc-car`**](https://github.com/amietlukas/embedded-vision-rc-car) *(public repo)*.
 A full edge-ML pipeline (dataset → trained model → quantized & pruned network) for an RC car
