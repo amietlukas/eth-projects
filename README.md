@@ -99,7 +99,8 @@ segmentation, and monocular depth estimation.
 ## Robotics — research & team projects
 
 ### Robotic Systems Lab (RSL) — Solving a Giant Rubik’s Cube with a Quadruped Robot
-xxx
+Paper currently under review.
+Find more information under: [**Project website*](https://leggedrobotics.github.io/rubik-skills/)
 
 ### NomadZ — autonomous humanoid soccer (RoboCup)
 Building the software stack for fully autonomous humanoid soccer robots with [**ETH NomadZ**](https://github.com/nomadz-ethz):
