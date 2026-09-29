@@ -11,19 +11,19 @@ or grant limited access on request.
 
 ---
 
-## Embedded ML on Microcontrollers — *ETH PBL*
+## Embedded ML on Microcontrollers — *ETH PBL* · Grade 6.0 / 6.0*
 
 [**`embedded-vision-rc-car`**](https://github.com/amietlukas/embedded-vision-rc-car) *(public repo)*.
-A full edge-ML pipeline (dataset → trained model → quantized & pruned network) for an RC car
-driven by **two STM32 boards**, with every model running **on-microcontroller** (no PC in the loop):
+A full edge-ML pipeline (dataset → trained models → quantized & pruned networks) for an RC car
+driven by **two STM32 boards**.
 
 - **Hand-gesture classifier** *(on an STM32U5)* — reads hand gestures from the camera
   and sends drive commands to the car over Bluetooth.
 - **Ball detector** *(on an STM32N6 NPU)* — a custom YOLO-style network finds a ball and
   pans/drives the car to chase it autonomously.
 
-Both models are trained on a PC but designed **hardware-aware** from the start
-(INT8 quantization and pruning, PyTorch → ONNX → on-device) to fit the Cortex-M / NPU targets.
+Both models are designed **hardware-aware** from the start
+(INT8 quantization and pruning, PyTorch → ONNX) to fit the Cortex-M / NPU targets.
 
 <p align="center">
   <a href="https://youtu.be/WXF68EdYNcE"><img src="https://github.com/amietlukas/embedded-vision-rc-car/raw/main/presentation/media/Paul_Assembled.jpeg" width="55%" alt="The assembled gesture-controlled, ball-chasing RC car — click to watch the demo"></a>
@@ -98,14 +98,8 @@ segmentation, and monocular depth estimation.
 
 ## Robotics — research & team projects
 
-### Robotic Systems Lab (RSL) — ANYmal-D solving a giant Rubik's cube via pedipulation
-*Perception & Learning for Robotics (PLR) — completed*<br>
-*Semester thesis — ongoing*
-
-Teaching a quadruped (ANYmal-D) to manipulate and solve a giant Rubik's cube:
-- Reinforcement learning in **Isaac Lab / Isaac Sim** (RSL-RL): articulated cube asset, reward shaping, curriculum, RND exploration, PPO teachers + perception-based student distillation.
-- **Sim-to-real** transfer and deployment on ANYmal-D hardware, with real-world failure diagnosis and iterative policy refinement.
-- Onboard cube perception: SAM-based segmentation, depth, colour classification, 6D pose estimation.
+### Robotic Systems Lab (RSL) — Solving a Giant Rubik’s Cube with a Quadruped Robot
+xxx
 
 ### NomadZ — autonomous humanoid soccer (RoboCup)
 Building the software stack for fully autonomous humanoid soccer robots with [**ETH NomadZ**](https://github.com/nomadz-ethz):
